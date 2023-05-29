@@ -20,6 +20,9 @@ username=$1
 # set permissions
    chown $username:$username /home/$username
    chmod 700 /home/$username
+   
+# change shell
+   usermod --shell /bin/bash $username
 
 # add user to sudoers
    echo "$username ALL=(ALL) ALL" >> /etc/sudoers
